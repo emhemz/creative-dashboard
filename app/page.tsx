@@ -4,11 +4,16 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default async function Home() {
-  const supabase = await createClient()
-  const { data } = await supabase.auth.getUser()
+  try {
+    const supabase = await createClient()
+    const { data } = await supabase.auth.getUser()
 
-  if (data.user) {
-    redirect('/dashboard')
+    if (data.user) {
+      redirect('/dashboard')
+    }
+  } catch (error) {
+    // If Supabase connection fails, continue to show the home page
+    console.error('Supabase connection error:', error)
   }
 
   return (
