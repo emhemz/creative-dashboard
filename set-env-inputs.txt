@@ -1,0 +1,4 @@
+y
+N
+production
+https://creative-dashboard.supabase.co
