@@ -1,0 +1,19 @@
+{
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "value": "@supabase_url",
+      "target": ["production", "preview", "development"]
+    },
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "value": "@supabase_anon_key",
+      "target": ["production", "preview", "development"]
+    },
+    {
+      "key": "SUPABASE_SERVICE_ROLE_KEY",
+      "value": "@supabase_service_role_key",
+      "target": ["production", "preview", "development"]
+    }
+  ]
+}
